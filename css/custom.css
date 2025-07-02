@@ -86,6 +86,7 @@ body {
 
 #list .item-info {
     padding: 12px;
+    text-align: left;
 }
 
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li > a {
