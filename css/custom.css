@@ -97,6 +97,11 @@ body {
     margin: 8px 0;
 }
 
+#list .item-info .price {
+    font-size: 20px;
+    color: green;
+}
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li > a {
     color: #f7ee4f !important;
     background: none;
