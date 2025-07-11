@@ -53,7 +53,7 @@ function createPagination() {
                     '<div class="item-info">' +
                     '<h2>' + row[0] + '</h2>' +
                     '<p><strong>Кількість: </strong>' + row[2] + '</p>' +
-                    '<p><strong>Ціна: </strong>' + row[5] + '</p>' +
+                    '<p class="price"><strong>Ціна: ' + row[5] + '</strong></p>' +
                     '<p><strong>Стан: </strong>' + row[4] + '</p>' +
                     '<p class="description">' + row[1] + '</p>' +
                     '</div>' +
