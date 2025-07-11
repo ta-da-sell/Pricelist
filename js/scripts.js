@@ -7,7 +7,7 @@ function toggleTheme() {
 
 const API_KEY = 'AIzaSyDvHIaJ4X6jysQ_Mq4jGvqVHkZcq9H0LNE';
 const SHEET_ID = '1QhKvGz3gv0HpIy3JbVGiE7cn12BAK2ld1LyCjh07-7Q';
-const RANGE = 'Лист1!A5:G1000'; // adjust to your range
+const RANGE = 'Лист1!A5:H1000'; // adjust to your range
 
 let dataList = [];
 let filteredList = [];
@@ -24,9 +24,9 @@ window.onload = () => {
         .then(data => {
             const categoriesContainer = $('#categories');
             dataList = data.values.filter(row => {
-                if (row[5] !== undefined && !categories.includes(row[5])) {
-                    categories.push(row[5]);
-                    categoriesContainer.append('<li onclick="filterByCategory(\'' + row[5] + '\')">' + row[5] + '</li>')
+                if (row[6] !== undefined && !categories.includes(row[6])) {
+                    categories.push(row[6]);
+                    categoriesContainer.append('<li onclick="filterByCategory(\'' + row[6] + '\')">' + row[6] + '</li>')
                 }
                 return row.length > 0;
             });
@@ -47,13 +47,14 @@ function createPagination() {
             let i = 0;
             data.forEach(row => {
                 container.append('<div class="item" data-category="???">' +
-                    '<a data-fancybox="image-' + i + '" href="' + row[6] + '">' +
-                    '<img src="' + row[6] + '" alt="' + row[0] + '">' +
+                    '<a data-fancybox="image-' + i + '" href="' + row[7] + '">' +
+                    '<img src="' + row[7] + '" alt="' + row[0] + '">' +
                     '</a>' +
                     '<div class="item-info">' +
                     '<h2>' + row[0] + '</h2>' +
                     '<p><strong>Кількість: </strong>' + row[2] + '</p>' +
-                    '<p><strong>Ціна: </strong>' + row[4] + '</p>' +
+                    '<p><strong>Ціна: </strong>' + row[5] + '</p>' +
+                    '<p><strong>Стан: </strong>' + row[4] + '</p>' +
                     '<p class="description">' + row[1] + '</p>' +
                     '</div>' +
                     '</div>');
@@ -75,7 +76,7 @@ function filterByCategory(category) {
     } else {
         filteredList = [];
         dataList.forEach(row => {
-            if (row[5] === category) {
+            if (row[6] === category) {
                 filteredList.push(row);
             }
         });
