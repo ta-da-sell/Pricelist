@@ -17,6 +17,10 @@ body {
     color: #f7ee4f;
 }
 
+.light-theme .header a {
+    color: #f7ee4f;
+}
+
 .footer {
     text-align: center;
     margin-top: 40px;
