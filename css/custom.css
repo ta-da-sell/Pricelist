@@ -102,6 +102,11 @@ body {
     color: green;
 }
 
+#list .item-info .stan {
+    font-size: 18px;
+    color: orange;
+}
+
 .paginationjs.paginationjs-theme-yellow .paginationjs-pages li > a {
     color: #f7ee4f !important;
     background: none;
